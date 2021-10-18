@@ -1,0 +1,26 @@
+{
+  "name": "open-token-mapping-list",
+  "version": "1.0.0",
+  "description": "Open token mapping",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chainmesh/open-token-mapping-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chainmesh/open-token-mapping-list/issues"
+  },
+  "homepage": "https://github.com/chainmesh/open-token-mapping-list#readme",
+  "dependencies": {
+    "ava": "^3.15.0",
+    "cross-fetch": "^3.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.1"
+  }
+}

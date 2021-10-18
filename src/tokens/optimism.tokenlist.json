@@ -1,0 +1,87 @@
+{
+    "name" : "Optimistic Ethereum Token List",
+    "logoURI" : "",
+    "keywords" : [
+        "optimism", "optimistic ethereum"
+    ],
+    "tags" : {
+        "stablecoin" : {
+            "name": "stablecoin",
+            "description": "Tokens that are fixed to an external asset, e.g. the US dollar"
+        }
+    },
+    "chainId" : 10,
+    "timestamp" : "2021-10-16T15:05:00.000Z",
+    "tokens" : [
+        {
+            "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+            "symbol": "USDT",
+            "name": "Tether USD",
+            "decimals": 6,
+            "logoURI": "",
+            "tags": [
+                "stablecoin"
+            ],
+            "extensions": {
+                "website": "https://tether.to/"
+            }
+        },
+        {
+            "address": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+            "symbol": "USDC",
+            "name": "USD Coin",
+            "decimals": 6,
+            "logoURI": "",
+            "tags": [
+                "stablecoin"
+            ],
+            "extensions": {
+                "website": "https://www.centre.io/"
+            }
+        },
+        {
+            "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+            "symbol": "DAI",
+            "name": "Dai Stablecoin",
+            "decimals": 18,
+            "logoURI": "",
+            "tags": [
+                "stablecoin"
+            ],
+            "extensions": {
+                "website": "https://makerdao.com/ "
+            }
+        },
+        {
+            "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+            "symbol": "WBTC",
+            "name": "Wrapped BTC",
+            "decimals": 8,
+            "logoURI": "",
+            "tags": [
+                ""
+            ],
+            "extensions": {
+                "website": "https://www.wbtc.network/"
+            }
+        },
+        {
+            "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+            "symbol": "SNX",
+            "name": "Synthetix Network Token",
+            "decimals": 18,
+            "logoURI": "",
+            "tags": [
+                ""
+            ],
+            "extensions": {
+                "website": "https://www.synthetix.io/ "
+            }
+        }
+    ],
+    "version": {
+        "major": 0,
+        "minor": 1,
+        "patch": 0
+    }
+}
