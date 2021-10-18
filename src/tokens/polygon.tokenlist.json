@@ -10,10 +10,10 @@
             "description": "Tokens that are fixed to an external asset, e.g. the US dollar"
         }
     },
-    "chainId" : 137,
     "timestamp" : "2021-10-16T15:05:00.000Z",
     "tokens" : [
         {
+            "chainId" : 137,
             "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
             "symbol": "USDT",
             "name": "(PoS) Tether USD",
@@ -27,6 +27,7 @@
             }
         },
         {
+            "chainId" : 137,
             "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
             "symbol": "USDC",
             "name": "USD Coin (PoS)",
@@ -40,6 +41,7 @@
             }
         },
         {
+            "chainId" : 137,
             "address": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
             "symbol": "DAI",
             "name": "(PoS) Dai Stablecoin",
@@ -53,66 +55,61 @@
             }
         },
         {
+            "chainId" : 137,
             "address": "0x0000000000000000000000000000000000001010",
             "symbol": "MATIC",
             "name": "Matic Token",
             "decimals": 18,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://matic.network/"
             }
         },
         {
+            "chainId" : 137,
             "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
             "symbol": "WETH",
             "name": "Wrapped Ether",
             "decimals": 18,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://weth.io/"
             }
         },
         {
+            "chainId" : 137,
             "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
             "symbol": "WBTC",
             "name": "(PoS) Wrapped BTC",
             "decimals": 8,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://www.wbtc.network/"
             }
         },
         {
+            "chainId" : 137,
             "address": "0x53e0bca35ec356bd5dddfebbd1fc0fd03fabad39",
             "symbol": "LINK",
             "name": "ChainLink Token",
             "decimals": 18,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://chain.link/"
             }
         },
         {
+            "chainId" : 137,
             "address": "0x50b728d8d964fd00c2d0aad81718b71311fef68a",
             "symbol": "SNX",
             "name": "Synthetix Network Token (PoS)",
             "decimals": 18,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://www.synthetix.io/ "
             }
