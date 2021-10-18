@@ -11,10 +11,10 @@
             "description": "Tokens that are fixed to an external asset, e.g. the US dollar"
         }
     },
-    "chainId" : 1,
     "timestamp" : "2021-10-16T15:05:00.000Z",
     "tokens" : [
         {
+            "chainId" : 1,
             "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
             "symbol": "USDT",
             "name": "Tether USD",
@@ -28,6 +28,7 @@
             }
         },
         {
+            "chainId" : 1,
             "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
             "symbol": "USDC",
             "name": "USD Coin",
@@ -41,6 +42,7 @@
             }
         },
         {
+            "chainId" : 1,
             "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
             "symbol": "DAI",
             "name": "Dai Stablecoin",
@@ -54,53 +56,49 @@
             }
         },
         {
+            "chainId" : 1,
             "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
             "symbol": "MATIC",
             "name": "Matic Token",
             "decimals": 18,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://matic.network/"
             }
         },
         {
+            "chainId" : 1,
             "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
             "symbol": "WBTC",
             "name": "Wrapped BTC",
             "decimals": 8,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://www.wbtc.network/"
             }
         },
         {
+            "chainId" : 1,
             "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
             "symbol": "LINK",
             "name": "ChainLink Token",
             "decimals": 18,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://chain.link/"
             }
         },
         {
+            "chainId" : 1,
             "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
             "symbol": "SNX",
             "name": "Synthetix Network Token",
             "decimals": 18,
             "logoURI": "",
-            "tags": [
-                ""
-            ],
+            "tags": [],
             "extensions": {
                 "website": "https://www.synthetix.io/ "
             }

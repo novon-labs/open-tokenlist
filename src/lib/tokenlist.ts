@@ -1,6 +1,7 @@
-import { fetch } from 'cross-fetch';
-
-import tokenlist from './../tokens/ethereum.tokenlist.json';
+import ethTokenlist from "./../tokens/ethereum.tokenlist.json";
+import polygonTokenlist from "./../tokens/polygon.tokenlist.json";
+import bscTokenlist from "./../tokens/bsc.tokenlist.json";
+import optimismTokenlist from "./../tokens/optimism.tokenlist.json";
 
 export interface TokenList {
   readonly name: string;
@@ -37,9 +38,9 @@ export interface TokenExtensions {
 export interface TokenInfo {
   readonly chainId: number;
   readonly address: string;
+  readonly symbol: string;
   readonly name: string;
   readonly decimals: number;
-  readonly symbol: string;
   readonly logoURI?: string;
   readonly tags?: string[];
   readonly extensions?: TokenExtensions;
@@ -47,79 +48,41 @@ export interface TokenInfo {
 
 export type TokenInfoMap = Map<string, TokenInfo>;
 
-export class GitHubTokenListResolutionStrategy {
-  repositories = [
-    'https://raw.githubusercontent.com/solana-labs/token-list/main/src/tokens/solana.tokenlist.json',
-  ];
-
-  resolve = () => {
-    return queryJsonFiles(this.repositories);
-  };
-}
-
-export class CDNTokenListResolutionStrategy {
-  repositories = [
-    'https://cdn.jsdelivr.net/gh/solana-labs/token-list@main/src/tokens/solana.tokenlist.json',
-  ];
-
-  resolve = () => {
-    return queryJsonFiles(this.repositories);
-  };
-}
-
-const queryJsonFiles = async (files: string[]) => {
-  const responses: TokenList[] = (await Promise.all(
-    files.map(async (repo) => {
-      try {
-        const response = await fetch(repo);
-        const json = (await response.json()) as TokenList;
-        return json;
-      } catch {
-        console.info(
-          `@solana/token-registry: falling back to static repository.`
-        );
-        return tokenlist;
-      }
-    })
-  )) as TokenList[];
-
-  return responses
-    .map((tokenlist: TokenList) => tokenlist.tokens)
-    .reduce((acc, arr) => (acc as TokenInfo[]).concat(arr), []);
-};
-
-export enum Strategy {
-  GitHub = 'GitHub',
-  Static = 'Static',
-  Solana = 'Solana',
-  CDN = 'CDN',
-}
-
-export class SolanaTokenListResolutionStrategy {
-  resolve = () => {
-    throw new Error(`Not Implemented Yet.`);
-  };
+export enum Chains {
+  ethereum = "ethereum",
+  bsc = "bsc",
+  polygon = "polygon",
+  optimism = "optimism",
 }
 
 export class StaticTokenListResolutionStrategy {
+  constructor(private chain: Chains) {}
   resolve = () => {
-    return tokenlist.tokens;
+    return this.getList() as TokenInfo[];
+  };
+
+  getList = () => {
+    if (this.chain == Chains.ethereum) {
+      return ethTokenlist.tokens;
+    }
+    if (this.chain == Chains.optimism) {
+      return optimismTokenlist.tokens;
+    }
+    if (this.chain == Chains.polygon) {
+      return polygonTokenlist.tokens;
+    }
+    if (this.chain == Chains.bsc) {
+      return bscTokenlist.tokens;
+    }
   };
 }
 
 export class TokenListProvider {
-  static strategies = {
-    [Strategy.GitHub]: new GitHubTokenListResolutionStrategy(),
-    [Strategy.Static]: new StaticTokenListResolutionStrategy(),
-    [Strategy.Solana]: new SolanaTokenListResolutionStrategy(),
-    [Strategy.CDN]: new CDNTokenListResolutionStrategy(),
-  };
+  constructor(private chain: Chains) {}
 
-  resolve = async (
-    strategy: Strategy = Strategy.CDN
-  ): Promise<TokenListContainer> => {
+  resolve = async () => {
     return new TokenListContainer(
-      await TokenListProvider.strategies[strategy].resolve()
+      await new StaticTokenListResolutionStrategy(this.chain).resolve()
     );
   };
 }
@@ -133,15 +96,9 @@ export class TokenListContainer {
     );
   };
 
-  filterByChainId = (chainId: number) => {
+  filterBySymbol = (symbol: string) => {
     return new TokenListContainer(
-      this.tokenList.filter((item) => item.chainId === chainId)
-    );
-  };
-
-  excludeByChainId = (chainId: number) => {
-    return new TokenListContainer(
-      this.tokenList.filter((item) => item.chainId !== chainId)
+      this.tokenList.filter((item) => (item.symbol  === symbol))
     );
   };
 
