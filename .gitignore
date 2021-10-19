@@ -1,4 +1,6 @@
-TOKENS.md
 node_modules/
 dist/
 package-lock.json
+.nyc_output
+coverage
+LICENSE

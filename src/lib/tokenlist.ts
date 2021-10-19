@@ -1,7 +1,7 @@
-import ethTokenlist from "./../tokens/ethereum.tokenlist.json";
-import polygonTokenlist from "./../tokens/polygon.tokenlist.json";
-import bscTokenlist from "./../tokens/bsc.tokenlist.json";
-import optimismTokenlist from "./../tokens/optimism.tokenlist.json";
+import bscTokenlist from './../tokens/bsc.tokenlist.json';
+import ethTokenlist from './../tokens/ethereum.tokenlist.json';
+import optimismTokenlist from './../tokens/optimism.tokenlist.json';
+import polygonTokenlist from './../tokens/polygon.tokenlist.json';
 
 export interface TokenList {
   readonly name: string;
@@ -48,41 +48,46 @@ export interface TokenInfo {
 
 export type TokenInfoMap = Map<string, TokenInfo>;
 
-export enum Chains {
-  ethereum = "ethereum",
-  bsc = "bsc",
-  polygon = "polygon",
-  optimism = "optimism",
+export enum CHAINS {
+  ethereum = 'ethereum',
+  bsc = 'bsc',
+  polygon = 'polygon',
+  optimism = 'optimism',
 }
 
 export class StaticTokenListResolutionStrategy {
-  constructor(private chain: Chains) {}
+  constructor(private chain: CHAINS) {}
   resolve = () => {
     return this.getList() as TokenInfo[];
   };
 
   getList = () => {
-    if (this.chain == Chains.ethereum) {
+    if (this.chain == CHAINS.ethereum) {
       return ethTokenlist.tokens;
     }
-    if (this.chain == Chains.optimism) {
+    if (this.chain == CHAINS.optimism) {
       return optimismTokenlist.tokens;
     }
-    if (this.chain == Chains.polygon) {
+    if (this.chain == CHAINS.polygon) {
       return polygonTokenlist.tokens;
     }
-    if (this.chain == Chains.bsc) {
+    if (this.chain == CHAINS.bsc) {
       return bscTokenlist.tokens;
     }
+    return false;
   };
 }
 
 export class TokenListProvider {
-  constructor(private chain: Chains) {}
+  constructor(private chain: CHAINS) {}
 
   resolve = async () => {
+    let strategy = await new StaticTokenListResolutionStrategy(this.chain).resolve()
+    if (!strategy) {
+      throw new Error("Invalid list");
+    }
     return new TokenListContainer(
-      await new StaticTokenListResolutionStrategy(this.chain).resolve()
+      strategy
     );
   };
 }
@@ -98,7 +103,7 @@ export class TokenListContainer {
 
   filterBySymbol = (symbol: string) => {
     return new TokenListContainer(
-      this.tokenList.filter((item) => (item.symbol  === symbol))
+      this.tokenList.filter((item) => item.symbol === symbol)
     );
   };
 
@@ -108,7 +113,5 @@ export class TokenListContainer {
     );
   };
 
-  getList = () => {
-    return this.tokenList;
-  };
+  getList = () => {return this.tokenList}
 }
