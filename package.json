@@ -1,13 +1,13 @@
 {
   "name": "open-tokenlist",
   "version": "1.0.0",
-  "description": "A package that contains addresses of mulitple tokens across multiple blockchains in one place.",
+  "description": "A package that contains addresses of multiple tokens across multiple blockchains in one place.",
   "main": "dist/main/index.js",
   "typings": "dist/main/index.d.ts",
   "module": "dist/module/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/novon-labs/Open-tokenlist.git"
+    "url": "git+https://github.com/novon-labs/open-tokenlist.git"
   },
   "license": "ISC",
   "keywords": [],
@@ -78,9 +78,7 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/novon-labs/Open-tokenlist/issues"
+    "url": "https://github.com/novon-labs/open-tokenlist/issues"
   },
-  "homepage": "https://github.com/novon-labs/Open-tokenlist#readme",
-  "dependencies": {},
-  "author": ""
+  "homepage": "https://github.com/novon-labs/open-tokenlist#readme"
 }
