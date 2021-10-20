@@ -16,7 +16,6 @@
       "symbol": "USDT",
       "name": "Tether USD",
       "decimals": 6,
-      "logoURI": "",
       "tags": ["stablecoin"],
       "extensions": {
         "website": "https://tether.to/"
@@ -28,7 +27,6 @@
       "symbol": "USDC",
       "name": "USD Coin",
       "decimals": 6,
-      "logoURI": "",
       "tags": ["stablecoin"],
       "extensions": {
         "website": "https://www.centre.io/"
@@ -40,7 +38,6 @@
       "symbol": "DAI",
       "name": "Dai Stablecoin",
       "decimals": 18,
-      "logoURI": "",
       "tags": ["stablecoin"],
       "extensions": {
         "website": "https://makerdao.com/ "
@@ -52,7 +49,6 @@
       "symbol": "WBTC",
       "name": "Wrapped BTC",
       "decimals": 8,
-      "logoURI": "",
       "tags": [],
       "extensions": {
         "website": "https://www.wbtc.network/"
@@ -64,7 +60,6 @@
       "symbol": "SNX",
       "name": "Synthetix Network Token",
       "decimals": 18,
-      "logoURI": "",
       "tags": [],
       "extensions": {
         "website": "https://www.synthetix.io/ "
