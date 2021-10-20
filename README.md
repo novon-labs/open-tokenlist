@@ -1,15 +1,15 @@
-# @novon/open-tokenlist
+# open-tokenlist
 
 The idea behind creating this repository is to have all of the tokens from different blockchain at one place that can be used in different application to retrieve token information across different blockchain.
 
 ## Installation
 
 ```bash
-npm install @novon/open-tokenlist
+npm install open-tokenlist
 ```
 
 ```bash
-yarn add @novon/open-tokenlist
+yarn add open-tokenlist
 ```
 
 ## Examples
@@ -28,7 +28,7 @@ new TokenListProvider(CHAINS.ethereum).resolve().then((tokens) => {
 
 ```typescript jsx
 import React, { useEffect, useState } from 'react';
-import { TokenListProvider, TokenInfo } from '@novon/open-tokenlist';
+import { TokenListProvider, TokenInfo } from 'open-tokenlist';
 export const Icon = (props: { mint: string }) => {
   const [tokenMap, setTokenMap] = useState<Map<string, TokenInfo>>(new Map());
   useEffect(() => {
