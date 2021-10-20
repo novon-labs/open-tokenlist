@@ -1,4 +1,4 @@
-ame: Testing on pull requests
+name: Testing on pull requests
 on:
   pull_request:
     types: [opened, synchronize, edited]
