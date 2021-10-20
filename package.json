@@ -1,6 +1,6 @@
 {
   "name": "open-tokenlist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package that contains addresses of multiple tokens across multiple blockchains in one place.",
   "main": "dist/main/index.js",
   "typings": "dist/main/index.d.ts",
