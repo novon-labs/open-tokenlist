@@ -12,6 +12,6 @@ jobs:
         with:
           node-version: '14.16.1'
       - name: Install dependencies
-        run: node install
+        run: npm install
       - name: Test the code
-        run: yarn test
+        run: npm run test:unit
