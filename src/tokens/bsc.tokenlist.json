@@ -16,7 +16,6 @@
       "symbol": "USDT",
       "name": "Binance-Peg BSC-USD",
       "decimals": 18,
-      "logoURI": "www",
       "tags": ["stablecoin"],
       "extensions": {}
     },
@@ -26,7 +25,6 @@
       "symbol": "USDC",
       "name": "Binance-Peg USD Coin",
       "decimals": 18,
-      "logoURI": "www",
       "tags": ["stablecoin"],
       "extensions": {
         "website": "https://www.centre.io/"
@@ -38,7 +36,6 @@
       "symbol": "DAI",
       "name": "Binance-Peg Dai Token",
       "decimals": 18,
-      "logoURI": "www",
       "tags": ["stablecoin"],
       "extensions": {
         "website": "https://makerdao.com/ "
@@ -50,7 +47,6 @@
       "symbol": "MATIC",
       "name": "Matic Token",
       "decimals": 18,
-      "logoURI": "www",
       "tags": [],
       "extensions": {
         "website": "https://matic.network/"
@@ -62,7 +58,6 @@
       "symbol": "ETH",
       "name": "Binance-Peg Ethereum Token",
       "decimals": 18,
-      "logoURI": "www",
       "tags": [],
       "extensions": {
         "website": "https://ethereum.org"
@@ -74,7 +69,6 @@
       "symbol": "WBTC",
       "name": "Binance-Peg BTCB Token",
       "decimals": 18,
-      "logoURI": "www",
       "tags": [],
       "extensions": {
         "website": "https://info.binance.com/en/currencies/bitcoin-bep2"
@@ -86,7 +80,6 @@
       "symbol": "LINK",
       "name": "ChainLink Token",
       "decimals": 18,
-      "logoURI": "www",
       "tags": [],
       "extensions": {
         "website": "https://chain.link/"
@@ -98,7 +91,6 @@
       "symbol": "SNX",
       "name": "Binance-Peg Synthetix Network Token",
       "decimals": 18,
-      "logoURI": "www",
       "tags": [],
       "extensions": {
         "website": "https://www.synthetix.io/ "
@@ -107,7 +99,7 @@
   ],
   "version": {
     "major": 0,
-    "minor": 3,
-    "patch": 2
+    "minor": 1,
+    "patch": 0
   }
 }
